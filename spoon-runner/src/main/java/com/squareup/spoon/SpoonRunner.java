@@ -346,7 +346,7 @@ public final class SpoonRunner {
     /** Path to test APK. */
     public Builder setTestApk(File apk) {
       checkNotNull(apk, "Test APK path not specified.");
-      checkArgument(apk.exists(), "Test APK path does not exist.");
+//      checkArgument(apk.exists(), "Test 11111111APK path does not exist.");
       this.testApk = apk;
       return this;
     }
@@ -354,7 +354,7 @@ public final class SpoonRunner {
     /** Add an other APK path. */
     public Builder addOtherApk(File apk) {
       checkNotNull(apk, "APK path not specified.");
-      checkArgument(apk.exists(), "APK path does not exist.");
+//      checkArgument(apk.isFile(), "APK path does not exist.");
       otherApks.add(apk);
       return this;
     }

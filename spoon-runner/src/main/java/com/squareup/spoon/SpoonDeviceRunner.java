@@ -162,7 +162,7 @@ public final class SpoonDeviceRunner {
     for (File otherApk : otherApks) {
       try {
         String extraArgument = getGrantAllExtraArgument(deviceDetails);
-        device.installPackage(otherApk.getAbsolutePath(), true, extraArgument);
+        device.installPackage(otherApk.getAbsolutePath(), true, extraArgument, "-t");
       } catch (InstallException e) {
         logInfo("InstallException while install other apk on device [%s]", serial);
         e.printStackTrace(System.out);
@@ -171,7 +171,7 @@ public final class SpoonDeviceRunner {
     }
     try {
       String extraArgument = getGrantAllExtraArgument(deviceDetails);
-      device.installPackage(testApk.getAbsolutePath(), true, extraArgument);
+      device.installPackage(testApk.getAbsolutePath(), true, extraArgument, "-t");
     } catch (InstallException e) {
       logInfo("InstallException while install test apk on device [%s]", serial);
       e.printStackTrace(System.out);
